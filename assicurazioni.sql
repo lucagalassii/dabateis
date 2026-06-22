@@ -137,14 +137,14 @@ CREATE TABLE LIQUIDAZIONE (
 );
 
 INSERT INTO INTERMEDIARIO (CodiceIntermediario, Nome, Cognome, Nascita, LuogoNascita, Specializzazione)
-VALUES (1, 'Mario', 'Rossi', '1985-05-12', 'Roma', 'Agenti Generali')
+VALUES (1, 'Luca', 'Galassi', '2005-07-11', 'Cesena', 'Agenti Generali')
 ON DUPLICATE KEY UPDATE CodiceIntermediario=CodiceIntermediario;
 
 INSERT INTO CLIENTE(CF, Nome, Cognome, Nascita, LuogoNascita, Telefono) 
-VALUES('ABCDEF12G34H567I', 'Luca', 'Galassi', '2005-07-11', 'Cesena', '123456789'); 
+VALUES('ABCDEF12G34H567I', 'Mario', 'Puppo', '1764-11-02', 'Cesena', '123456789'); 
 
 INSERT INTO PREVENTIVO(NumeroPreventivo, DataRichiesta, DataScadenza, Prezzo, Stato, PrezzoLavorato, Sconto, CF, CodiceIntermediario) 
-VALUES (1001, '2026-06-05', '2026-07-05', 450.00, 'In attesa', 450.00, 10.00, 'ABCDEF12G34H567I', 1);
+VALUES (1056, '2026-06-05', '2026-07-05', 450.00, 'In attesa', 450.00, 10.00, 'ABCDEF12G34H567I', 1);
 
 UPDATE PREVENTIVO SET Stato = 'Accettato' 
 WHERE NumeroPreventivo = 1001; 
@@ -158,7 +158,7 @@ INSERT INTO SINISTRO(IdSinistro, DataSinistro, Stato, DannoStima, NumeroPolizza)
 VALUES(104, '2026-06-19', 'Aperto', 1200.00, 'POL-0000001'); 
 
 INSERT INTO PERITO (CodPerito, Nome, Cognome, Specializzazione)
-VALUES (1, 'Luigi', 'Verdi', 'Infortuni e Automotive')
+VALUES (1, 'Maldestro', 'Pippo', 'Infortuni e Automotive')
 ON DUPLICATE KEY UPDATE CodPerito=CodPerito;
 
 INSERT INTO LIQUIDAZIONE(IDLiquidazione, DataPagamento, MetodoPagamento, CodPerito) 
