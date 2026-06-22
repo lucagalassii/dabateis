@@ -147,9 +147,9 @@ INSERT INTO PREVENTIVO(NumeroPreventivo, DataRichiesta, DataScadenza, Prezzo, St
 VALUES (1056, '2026-06-05', '2026-07-05', 450.00, 'In attesa', 450.00, 10.00, 'ABCDEF12G34H567I', 1);
 
 UPDATE PREVENTIVO SET Stato = 'Accettato' 
-WHERE NumeroPreventivo = 1001; 
+WHERE NumeroPreventivo = 1056; 
 INSERT INTO POLIZZA(NumeroPolizza, Prezzo, Frazionamento, DataInizioEffetti, DataFineEffetti, NumeroPreventivo) 
-VALUES('POL-0000001', 450.00, 'Annuale', '2026-06-05', '2027-06-05', 1001);
+VALUES('POL-0000001', 450.00, 'Annuale', '2026-06-05', '2027-06-05', 1056);
 
 UPDATE RATA SET NumeroPolizza = 'POL-0000001'
 WHERE IDRata = 1069; 
